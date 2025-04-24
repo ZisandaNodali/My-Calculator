@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
 import { copyFileSync } from 'fs'
 
+// Vite config
 export default defineConfig({
   plugins: [react()],
   build: {
@@ -12,9 +13,8 @@ export default defineConfig({
       }
     }
   },
-  // Copy _redirects manually on build
+  // This ensures _redirects gets copied to dist after build
   closeBundle() {
     copyFileSync('public/_redirects', 'dist/_redirects')
   }
 })
-
