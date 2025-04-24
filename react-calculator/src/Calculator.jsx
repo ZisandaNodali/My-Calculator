@@ -34,7 +34,7 @@ export default function Calculator() {
 
   return (
     <div style={{ maxWidth: "400px", margin: "auto", padding: "20px" }}>
-      <h1>React Calculator</h1>
+      <h1>Simple Calculator</h1>
       <input
         type="number"
         placeholder="First number"
@@ -56,7 +56,7 @@ export default function Calculator() {
         <option value="/">Divide (/)</option>
       </select>
       <br /><br />
-      <button onClick={calculate}>Calculate</button>
+      <button onClick={calculate} className="navy-button">Calculate</button>
       {result !== null && <h3>Result: {result}</h3>}
     </div>
   );

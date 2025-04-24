@@ -25,7 +25,8 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  justify-content: center; /* centers horizontally */
+  align-items: center;     /* centers vertically */
   min-width: 320px;
   min-height: 100vh;
 }
@@ -53,6 +54,15 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+.navy-button {
+  background-color: navy;
+  color: white;
+}
+
+.navy-button:hover {
+  border-color: #000080; /* darker navy border on hover */
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {
